@@ -1,0 +1,153 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#f4f6f8;
+}
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#0f172a;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+    z-index:1000;
+}
+
+.logo{
+    font-size:1.5rem;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#38bdf8;
+}
+
+.hero{
+    padding:140px 20px 60px;
+    text-align:center;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    color:white;
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+.cards-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    padding:40px;
+}
+
+.card{
+    position:relative;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.badge{
+    position:absolute;
+    top:15px;
+    right:15px;
+    color:white;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.new{
+    background:#22c55e;
+}
+
+.popular{
+    background:#f59e0b;
+}
+
+.featured{
+    background:#ef4444;
+}
+
+.card h2{
+    margin-top:25px;
+    margin-bottom:15px;
+    color:#2563eb;
+}
+
+.card p{
+    margin-bottom:20px;
+    line-height:1.6;
+}
+
+button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+        padding:15px;
+    }
+
+    .nav-links{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+    .cards-container{
+        grid-template-columns:1fr;
+        padding:20px;
+    }
+
+}
